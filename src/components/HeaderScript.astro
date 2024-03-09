@@ -1,0 +1,51 @@
+<script>
+  const $menu = document.getElementById("menu") || new HTMLButtonElement();
+  const $items = document.getElementById("items") || new HTMLUlElement();
+  const $menuIcon = document.getElementById("menu-icon");
+  const $closeIcon = document.getElementById("close-icon");
+
+  const hidden = "hidden";
+  const block = "block";
+  const slideInTop = "animate-slide-in-top";
+  const slideInBottom = "animate-slide-in-bottom";
+  const fadeIn = "animate-fade-in";
+  const fadeOut = "animate-fade-out";
+
+  $menu.onclick = () => {
+    const isShowItems = $items.className.includes(hidden);
+    isShowItems ? showItems() : hiddenItems();
+  };
+
+  $items.onclick = () => {
+    hiddenItems();
+  };
+
+  function showItems() {
+    $closeIcon?.classList.remove(hidden);
+    $closeIcon?.classList.remove(fadeOut);
+    $closeIcon?.classList.add(block);
+    $closeIcon?.classList.add(fadeIn);
+
+    $menuIcon?.classList.add(hidden);
+
+    $items.classList.remove(hidden);
+    $items.classList.remove(slideInBottom);
+    $items.classList.add(slideInTop);
+  }
+
+  function hiddenItems() {
+    $menuIcon?.classList.remove(hidden);
+    $menuIcon?.classList.add(fadeIn);
+    $menuIcon?.classList.add(block);
+
+    $closeIcon?.classList.remove(fadeIn);
+    $closeIcon?.classList.add(fadeOut);
+    $closeIcon?.classList.add(hidden);
+
+    $items.classList.add(fadeOut);
+    $items.classList.remove(slideInTop);
+    setTimeout(() => {
+      $items?.classList.add(hidden);
+    }, 500);
+  }
+</script>

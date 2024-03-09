@@ -1,0 +1,11 @@
+---
+const { id, text } = Astro.props;
+---
+
+<li
+  class="block px-3 mx-3 py-2 text-base font-semibold leading-7 lg:mx-0 lg:py-0 hover:animate-pop hover:bg-sky-50 hover:rounded-lg"
+>
+  <a href={`#${id}`}>
+    {text}
+  </a>
+</li>

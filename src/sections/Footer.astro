@@ -1,0 +1,56 @@
+---
+import Phone from "@/icons/Phone.astro";
+import Whatsapp from "@/icons/Whatsapp.astro";
+import Email from "@/icons/Email.astro";
+import Typography from "@/components/Typography.astro";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-100">
+  <div class="w-full lg:w-[800px] overflow-y-auto px-3 py-2 mx-auto lg:gap-4 lg:pl-10">
+    <div class="grid grid-cols-2 gap-2">
+      <img
+        class="aspect-square object-fill"
+        src="/wis.webp"
+        alt="Wis Developer Code"
+      />
+      <div class="flex flex-col items-start justify-center lg:items-end">
+        <Typography
+          as="a"
+          variant="small"
+          href="tel:+50241096172"
+          target="_blank"
+          class:list={"flex items-center py-1 hover:animate-pulse-fade-in"}
+        >
+          <Phone />
+          Teléfono
+        </Typography>
+        <Typography
+          as="a"
+          variant="small"
+          href="https://wa.me/+50232484480"
+          target="_blank"
+          class:list={"flex items-center py-1 hover:animate-pulse-fade-in"}
+        >
+          <Whatsapp />
+          Whatsapp
+        </Typography>
+        <Typography
+          as="a"
+          variant="small"
+          href="mailto:info@wisdevcode.com"
+          class:list={"flex items-center py-1 hover:animate-pulse-fade-in"}
+        >
+          <Email />
+          Correo Electrónico
+        </Typography>
+      </div>
+    </div>
+  </div>
+  <div class="bg-blue p-2">
+    <Typography color="white" class:list={"text-center"}>
+      &copy; {currentYear} WIS Developer Code
+    </Typography>
+  </div>
+</footer>

@@ -1,0 +1,36 @@
+---
+import Typography from "@/components/Typography.astro";
+import Card from "@/components/Card.astro";
+import Aspel from "@/icons/Aspel.astro";
+
+import { SERVICES } from "@/consts/services.ts";
+
+const ICONS: Record<string, any> = {
+  Aspel,
+};
+---
+
+<section class="grid gap-4 my-8 lg:mt-36">
+  <Typography as="h1" variant="title" class:list={"text-center mt-8 lg:mt-0"}>
+    Servicios
+  </Typography>
+  <div class="mt-4 services">
+    {
+      SERVICES.map(({ id, name, description, icon }) => {
+        const Icon = ICONS[icon];
+        return (
+          <Card id={id} name={name} description={description}>
+            <Icon />
+          </Card>
+        );
+      })
+    }
+  </div>
+</section>
+<style>
+  div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+  }
+</style>

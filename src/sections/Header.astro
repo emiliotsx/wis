@@ -1,0 +1,37 @@
+---
+import Menu from "@/icons/Menu.astro";
+import Close from "@/icons/Close.astro";
+import Link from "@/components/Link.astro";
+import HeaderScript from "@/components/HeaderScript.astro";
+
+import { SECTIONS } from "@/consts/sections";
+---
+
+<header
+  class="bg-white w-full overflow-y-auto px-3 py-2 lg:w-[800px] lg:gap-4 m-[0_auto]"
+>
+  <nav class="grid lg:grid-cols-2">
+    <div class="flex items-center justify-between">
+      <figure class="-m-1.5 p-1.5 lg:mx-3 lg:px-3 lg:py-2 lg:z-10">
+        <img class="h-12 w-auto" src="/wis.webp" alt="WIS Developers Code" />
+      </figure>
+      <button id="menu" type="button" class="-m-2.5 rounded-md p-2.5 lg:hidden">
+        <Menu />
+        <Close />
+      </button>
+    </div>
+    <ul
+      id="items"
+      class="fixed w-full hidden right-0 text-center mt-14 bg-white"
+    >
+      {SECTIONS.map(({ id, text }) => <Link id={id} text={text} />)}
+    </ul>
+    <ul
+      id="items"
+      class="bg-white hidden lg:flex justify-end items-center mt-0 w-auto"
+    >
+      {SECTIONS.map(({ id, text }) => <Link id={id} text={text} />)}
+    </ul>
+  </nav>
+</header>
+<HeaderScript />
