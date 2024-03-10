@@ -1,7 +1,7 @@
 export const SERVICES = [
   { id: 'fel', name: 'eMONITOR FEL', description: 'Integración de Factura Electrónica para Aspel-SAE 5.0 o superior para envíos a diferentes certificadores, plataforma con manejo de usuarios, multiempresas, multisucursales, reportería y monitor de visualización de documentos.', icon: 'Aspel' },
   { id: 'send', name: 'Envíos Aspel-SAE', description: 'Sistema de administración de Envíos para bodega para personal sin acceso a Aspel-SAE, multiusuarios, multiempresas, con captura de envíos e impresión de documentos.', icon: 'Aspel' },
-  { id: 'order', name: 'Órdenes de Compra', description: 'Software para la creación de Órdenes de compra con integración a Aspel-SAE 5.0 o superior, multiusuarios, multiempresas, captura, consulta y visualización de órdenes de compra', icon: 'Aspel' },
+  { id: 'order', name: 'Órdenes de Compra', description: 'Software para la creación de Órdenes de compra con integración a Aspel-SAE 5.0 o superior, multiusuarios, multiempresas, captura, consulta y visualización de órdenes de compra.', icon: 'Aspel' },
   { id: 'póliza', name: 'Importación/Exportación', description: 'Software para la elaboración de pólizas para Exportaciones e Importaciones con integración a Aspel-SAE y Aspel-COI, multiusuarios, multiempresas, con captura, consulta y visualización de pólizas.', icon: 'Aspel' },
   { id: 'pedido', name: 'Pedidos Web', description: 'Software para la elaboración de pedidos de forma web a traves de teléfono, tablet o computadora con integración a Aspel-SAE 5.0 o superior, multiusuarios, multiempresas, con captura, consulta, visualización de los pedidos realizados.', icon: 'Aspel' }
 ]

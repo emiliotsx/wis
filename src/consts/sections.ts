@@ -5,5 +5,6 @@ interface Section {
 
 export const SECTIONS: Section[] = [
   { id: 'about', text: 'Sobre Nosotros' },
-  { id: 'services', text: 'Servicios' }
+  { id: 'services', text: 'Servicios' },
+  { id: 'contact', text: 'Contacto' }
 ]

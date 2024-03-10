@@ -3,9 +3,9 @@ import "@fontsource/audiowide";
 
 import Typography from "@/components/Typography.astro";
 
-import { COMPANY } from "@/consts/company.ts";
+import { CONTACTUS } from "@/consts/contact.ts";
 
-const { name, summary, secondSummary } = COMPANY;
+const { title, description } = CONTACTUS;
 ---
 
 <section class="flex flex-col items-center justify-center my-8">
@@ -14,13 +14,10 @@ const { name, summary, secondSummary } = COMPANY;
     variant="title"
     class:list={"text-center lg:mt-0 lg:leading-6"}
   >
-    {name}
+    {title}
   </Typography>
   <Typography class:list={"text-center mt-4 p-5 lg:mt-10"}>
-    {summary}
-  </Typography>
-  <Typography class:list={"text-center mb-4 p-5 lg:mt-4"}>
-    {secondSummary}
+    {description}
   </Typography>
 </section>
 <style>
