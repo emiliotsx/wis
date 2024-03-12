@@ -4,15 +4,17 @@ import Typography from "@/components/Typography.astro";
 const { name, description } = Astro.props;
 ---
 
-<article class="rounded-xl p-2 mx-auto text-center min-h-[225px] hover:animate-pulsing">
+<article
+  class="rounded-xl p-2 mx-auto text-center min-h-[225px] hover:animate-pulsing"
+>
   <header class="flex items-center justify-center p-4">
     <slot />
   </header>
-  <Typography as="h3" class:list={"m-4 font-bold"}>
+  <Typography as="h3" class:list={"font-bold p-0"}>
     {name}
   </Typography>
   <footer class="flex-1">
-    <Typography variant="medium" class:list={"m-4"}>
+    <Typography variant="medium">
       {description}
     </Typography>
   </footer>
@@ -21,7 +23,7 @@ const { name, description } = Astro.props;
   article {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
-  
+
   article:hover {
     box-shadow: #bfdbfe 0px 2px 8px 0px;
   }

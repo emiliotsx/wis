@@ -1,6 +1,5 @@
 ---
-import "@fontsource/audiowide";
-
+import Section from "@/components/Section.astro";
 import Typography from "@/components/Typography.astro";
 
 import { COMPANY } from "@/consts/company.ts";
@@ -8,23 +7,18 @@ import { COMPANY } from "@/consts/company.ts";
 const { name, summary, secondSummary } = COMPANY;
 ---
 
-<section class="flex flex-col items-center justify-center my-8">
+<Section class:list={"flex flex-col items-center justify-center my-8"}>
   <Typography
     as="h1"
     variant="title"
-    class:list={"text-center lg:mt-0 lg:leading-6"}
+    class:list={"text-center lg:leading-6"}
   >
     {name}
   </Typography>
-  <Typography class:list={"text-center mt-4 p-5 lg:mt-10"}>
+  <Typography class:list={"text-center lg:mt-8"}>
     {summary}
   </Typography>
-  <Typography class:list={"text-center mb-4 p-5 lg:mt-4"}>
+  <Typography class:list={"text-center lg:mt-4"}>
     {secondSummary}
   </Typography>
-</section>
-<style>
-  h1 {
-    font-family: "Audiowide";
-  }
-</style>
+</Section>

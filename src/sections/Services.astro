@@ -1,4 +1,5 @@
 ---
+import Section from "@/components/Section.astro";
 import Typography from "@/components/Typography.astro";
 import Card from "@/components/Card.astro";
 import Aspel from "@/icons/Aspel.astro";
@@ -10,23 +11,25 @@ const ICONS: Record<string, any> = {
 };
 ---
 
-<section class="grid gap-4 my-8 lg:mt-36">
-  <Typography as="h1" variant="title" class:list={"text-center mt-8 lg:mt-0"}>
-    Servicios
-  </Typography>
-  <div class="mt-4 services">
-    {
-      SERVICES.map(({ id, name, description, icon }) => {
-        const Icon = ICONS[icon];
-        return (
-          <Card key={id} name={name} description={description}>
-            <Icon />
-          </Card>
-        );
-      })
-    }
-  </div>
-</section>
+<Section class:list={"grid gap-4"}>
+  <article id="services" data-aos="fade-up">
+    <Typography as="h1" variant="title" class:list={"text-center lg:mt-0"}>
+      Servicios
+    </Typography>
+    <div class="mt-8 services lg:mt-8">
+      {
+        SERVICES.map(({ id, name, description, icon }) => {
+          const Icon = ICONS[icon];
+          return (
+            <Card key={id} name={name} description={description}>
+              <Icon />
+            </Card>
+          );
+        })
+      }
+    </div>
+  </article>
+</Section>
 <style>
   div {
     display: grid;
