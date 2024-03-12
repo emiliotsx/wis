@@ -12,21 +12,23 @@ const ICONS: Record<string, any> = {
 ---
 
 <Section class:list={"grid gap-4"}>
-  <Typography as="h1" variant="title" class:list={"text-center lg:mt-0"}>
-    Servicios
-  </Typography>
-  <div class="mt-4 services lg:mt-8">
-    {
-      SERVICES.map(({ id, name, description, icon }) => {
-        const Icon = ICONS[icon];
-        return (
-          <Card key={id} name={name} description={description}>
-            <Icon />
-          </Card>
-        );
-      })
-    }
-  </div>
+  <article id="services" data-aos="fade-up">
+    <Typography as="h1" variant="title" class:list={"text-center lg:mt-0"}>
+      Servicios
+    </Typography>
+    <div class="mt-8 services lg:mt-8">
+      {
+        SERVICES.map(({ id, name, description, icon }) => {
+          const Icon = ICONS[icon];
+          return (
+            <Card key={id} name={name} description={description}>
+              <Icon />
+            </Card>
+          );
+        })
+      }
+    </div>
+  </article>
 </Section>
 <style>
   div {

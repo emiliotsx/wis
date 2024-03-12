@@ -1,9 +1,11 @@
 ---
-import "@fontsource/open-sans"
+import "@fontsource/open-sans";
 import "@fontsource/audiowide";
+import "aos/dist/aos.css";
 
 import Header from "@/sections/Header.astro";
 import Footer from "@/sections/Footer.astro";
+import Aos from "@/components/AosScript.astro";
 
 interface Props {
 	title: string;
@@ -22,7 +24,8 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="">
+	<body>
+		<Aos />
 		<Header />
 		<slot />
 		<Footer />
@@ -55,6 +58,6 @@ const { title } = Astro.props;
 	}
 
 	h1 {
-    font-family: "Audiowide";
-  }
+		font-family: "Audiowide";
+	}
 </style>
